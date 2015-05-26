@@ -22,6 +22,9 @@
 additions]
 
 % Pakeitimai:
+% 2015.05.26 (1.3.1 versija)
+%    * Paveikslėlių ir lentelių antraštėms formatuoti
+%      pradėtas naudoti caption paketas.
 % 2007.01.26 (1.3.0 versija)
 %    * Atnaujinta darbui su littex-20060928 lituanizacija.
 %    * Pašalintas URW šriftų tvarkymas.
@@ -171,4 +174,8 @@ additions]
 
 % Teisingai formatuojame lentelių antraštes.
   % Buvo: \def\fnum@table{\tablename\nobreakspace\thetable}
-\def\fnum@table{\thetable\nobreakspace\tablename.}
+\def\fnum@table{\thetable\nobreakspace\tablename}
+
+\RequirePackage{caption}
+\captionsetup*[table]{labelsep=period}
+\captionsetup*[figure]{labelsep=period, name=pav}

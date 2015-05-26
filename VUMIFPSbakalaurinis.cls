@@ -21,6 +21,8 @@
 \PrerenderUnicode{ąčęėįšųūž}
 \RequirePackage[\LTfontencoding]{fontenc}
 \RequirePackage[lithuanian]{babel}
+\RequirePackage{silence}
+\WarningFilter{caption}{Unsupported document class}
 \RequirePackage{LTPlius}  % Nustatymų sulietuvinimas
 
 \RequirePackage{times}
@@ -46,6 +48,11 @@
 \lfoot{}
 \cfoot{}
 \rfoot{\thepage} % Numeris bus puslapio apačioje dešinėje
+
+% Po lentelės antraštės prefiksu bus dedamas taškas
+\RequirePackage{caption}
+\captionsetup*[table]{labelsep=period}
+\captionsetup*[figure]{labelsep=period, name=pav}
 
 % Informacijos tituliniame puslapyje kintamieji
 \newcommand{\university}[1]{\def\@university{#1}}
