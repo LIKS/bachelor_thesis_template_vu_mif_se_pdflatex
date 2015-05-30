@@ -229,6 +229,7 @@
     \setcounter{section}{0}%
     \renewcommand{\thesection}{nr. \arabic{section}}%
     % Insert record to TOC 
+    \newpage
     \addcontentsline{toc}{section}{\MakeUppercase{Priedai}}%}
 }
 
